@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".activities.CameraActivity">
+
+    <!-- Camera Preview (full screen) -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Scanning frame overlay guide -->
+    <View
+        android:id="@+id/scanFrame"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/scan_frame" />
+
+    <!-- Answer overlay (drawn on top of preview) -->
+    <com.example.gamewinner.overlay.AnswerOverlayView
+        android:id="@+id/answerOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Top status bar -->
+    <LinearLayout
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/gradient_status_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="12dp">
+
+        <!-- Close button -->
+        <TextView
+            android:id="@+id/btnClose"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:text="✕"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/circle_button_bg"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Status indicator -->
+        <View
+            android:id="@+id/statusDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/status_dot" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Initializing..."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Processing spinner -->
+        <ProgressBar
+            android:id="@+id/progressIndicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            style="?android:attr/progressBarStyleSmall" />
+
+    </LinearLayout>
+
+    <!-- Raw OCR Text (hidden until text is found) -->
+    <TextView
+        android:id="@+id/tvOcrText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#88000000"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:maxLines="10"
+        android:ellipsize="end"
+        android:visibility="gone"
+        tools:text="Raw OCR text..."
+        tools:visibility="visible" />
+
+    <!-- Zoom Slider -->
+    <LinearLayout
+        android:id="@+id/zoomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="140dp"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/zoomSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@android:color/white"
+            android:thumbTint="@color/accent_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Capture Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="64dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:backgroundTint="@color/accent_primary"
+        app:tint="@android:color/white"
+        app:fabSize="normal" />
+
+    <!-- Bottom hint -->
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:text="@string/camera_hint"
+        android:textColor="#99FFFFFF"
+        android:textSize="13sp"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/hint_badge_bg"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+</FrameLayout>

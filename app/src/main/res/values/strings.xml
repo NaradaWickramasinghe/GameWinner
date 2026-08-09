@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GameWinner</string>
+    <string name="tagline">AI-Powered Quiz Scanner</string>
+
+    <!-- Main screen -->
+    <string name="start_scanning">Start Scanning</string>
+    <string name="version_text">v1.0 • Powered by Gemini AI</string>
+
+    <!-- Features -->
+    <string name="feature_1_title">Instant OCR</string>
+    <string name="feature_1_desc">Point your camera at any quiz question</string>
+    <string name="feature_2_title">AI-Powered Answers</string>
+    <string name="feature_2_desc">Gemini AI analyzes and answers in seconds</string>
+    <string name="feature_3_title">Real-time Overlay</string>
+    <string name="feature_3_desc">See answers directly on your camera view</string>
+
+    <!-- Camera screen -->
+    <string name="camera_hint">Point camera at a question to scan</string>
+    <string name="camera_permission_required">Camera permission is required</string>
+
+    <!-- Status messages -->
+    <string name="status_ready">Ready to scan</string>
+    <string name="status_processing">Processing...</string>
+    <string name="status_error">Error occurred</string>
+
+    <!-- Screen capture mode -->
+    <string name="camera_mode">📷  Camera Mode</string>
+    <string name="screen_mode">🖥️  Screen Mode</string>
+</resources>

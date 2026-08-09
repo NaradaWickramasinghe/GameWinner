@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core palette -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Dark theme backgrounds -->
+    <color name="background_dark">#FF0D1117</color>
+    <color name="background_surface">#FF161B22</color>
+    <color name="background_elevated">#FF21262D</color>
+
+    <!-- Accent colors -->
+    <color name="accent_primary">#FF6C63FF</color>
+    <color name="accent_secondary">#FF00D4AA</color>
+    <color name="accent_tertiary">#FFFF6B9D</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB0B8C4</color>
+    <color name="text_tertiary">#FF6B7280</color>
+
+    <!-- Status colors -->
+    <color name="status_success">#FF4CAF50</color>
+    <color name="status_warning">#FFFF9800</color>
+    <color name="status_error">#FFF44336</color>
+
+    <!-- Confidence colors -->
+    <color name="confidence_high">#FF00C853</color>
+    <color name="confidence_medium">#FFFF6D00</color>
+    <color name="confidence_low">#FFD50000</color>
+
+    <!-- Overlay -->
+    <color name="overlay_background">#CC000000</color>
+    <color name="scan_frame_border">#806C63FF</color>
+</resources>

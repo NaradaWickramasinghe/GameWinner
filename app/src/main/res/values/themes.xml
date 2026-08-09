@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme — dark mode with custom accent -->
+    <style name="Base.Theme.GameWinner" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="colorSecondary">@color/accent_secondary</item>
+        <item name="colorTertiary">@color/accent_tertiary</item>
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+    </style>
+
+    <style name="Theme.GameWinner" parent="Base.Theme.GameWinner" />
+
+    <!-- Full-screen camera theme -->
+    <style name="Theme.GameWinner.Camera">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>
