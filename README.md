@@ -39,7 +39,7 @@ GameWinner is a powerful, real-time Android AI assistant designed to help you qu
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/GameWinner.git
+   git clone https://github.com/NaradaWickramasinghe/GameWinner.git
    ```
 2. Open the project in Android Studio.
 3. Build and run the app on your physical device (`./gradlew installDebug`). 
